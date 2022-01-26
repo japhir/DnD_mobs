@@ -1,0 +1,45 @@
+### some examples
+
+Load the functions so we can call them
+```{r}
+source("roll_dnd_mobs.R")
+```
+
+Attack with 15 level 3 human ranger hunters with a shortsword.
+```{r}
+attack(15, +6, 1, 8, +4, AC = 15)
+```
+
+They can also attack with their off-hand using their bonus action, but for the damage we do not add the ability modifier.
+```{r}
+attack(15, +6, 1, 8, +0, AC = 15)
+```
+
+Our hunters are colossus slayers, so they deal an extra 1d8 damage if the target's HP is below it's max HP: (only once per turn, only for first attack).
+```{r}
+attack(15, +6, 2, 8, +4, AC = 15)
+```
+
+Define a special case for our hunter's combined attack (you can too!)
+```{r}
+hunters <- function(n = 20, AC, advantage = FALSE, disadvantage = FALSE) {
+  first <- attack(n, +6, 2, 8, +4, AC = AC, advantage = advantage, disadvantage = disadvantage)
+  second <- attack(n, +6, 1, 8, +0, AC = AC, advantage = advantage, disadvantage = disadvantage)
+  list(colossus = first, off_hand = second, sum = first$tot + second$tot)
+}
+```
+
+Attack with 19 archers that have a +8 bonus to hit. They are also colossus slayers so they roll 2d8+4 damage against an AC of 15, with advantage.
+```{r}
+attack(19, +8, 2, 8, +4, AC = 15, adv = TRUE)
+```
+
+Do a stealth check for 15 human ranger hunters, who have +6 on stealth.
+```{r}
+check(15, +6, DC = 14)
+```
+
+A saving throw is the same as a skill check.
+```{r}
+save(15, +6, DC = 14)
+```
