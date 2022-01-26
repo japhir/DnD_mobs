@@ -22,3 +22,4 @@ Save [[file:roll_dnd_mobs.R]] and open it in your local R session.
    - ~attack(19, +8, 2, 8, +4, AC = 15, adv = TRUE)~ will attack with 19
      archers that have a +8 bonus to hit. They are also colossus slayers so
      they roll 2d8+4 damage against an AC of 15, with advantage
+   - ~save(20, +4, DC = 13)~ to make 20 DC 13 saving throws or skill checks with a +4 bonus.
