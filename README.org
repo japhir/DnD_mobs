@@ -1,0 +1,9 @@
+We're running a massive final D&D 5e battlefield, and would like to roll the
+dice! but having to roll 20d20 to determine if your army of archers hits is a
+pain so here is some R code to simulate dice-rolls for large groups of mobs.
+
+It shows you exactly what was rolled so you can still cheer on your army of
+champions! (except for individual damage dice, but I don't care too much about
+that).
+
+Run this interactively via a binder <- will add link here later
