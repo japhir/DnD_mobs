@@ -7,12 +7,24 @@ source("roll_dnd_mobs.R")
 
 Attack with 15 level 3 human ranger hunters with a shortsword.
 ```{r}
-attack(15, +6, 1, 8, +4, AC = 15)
+attack(24, +6, 1, 8, +4, AC = 15)
 ```
 
 They can also attack with their off-hand using their bonus action, but for the damage we do not add the ability modifier.
 ```{r}
-attack(15, +6, 1, 8, +0, AC = 15)
+attack(24, +6, 1, 8, +0, AC = )
+```
+
+## monsters
+
+the undead armies vs. dragon
+```{r}
+attack(29, +4, 1, 6, +2, AC = 18)
+```
+
+de frost giants
+```{r}
+attack(6, +4, 3, 12, +4, AC = 17)
 ```
 
 Our hunters are colossus slayers, so they deal an extra 1d8 damage if the target's HP is below it's max HP: (only once per turn, only for first attack).
@@ -31,7 +43,7 @@ hunters <- function(n = 20, AC, advantage = FALSE, disadvantage = FALSE) {
 
 Attack with 19 archers that have a +8 bonus to hit. They are also colossus slayers so they roll 2d8+4 damage against an AC of 15, with advantage.
 ```{r}
-attack(19, +8, 2, 8, +4, AC = 15, adv = TRUE)
+attack(n_mobs = 20, to_hit = +8, dmg_die_n = 2, dmg_die = 8, dmg_bonus = +4, AC = 15)
 ```
 
 Do a stealth check for 15 human ranger hunters, who have +6 on stealth.
