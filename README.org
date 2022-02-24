@@ -8,6 +8,8 @@ It shows you exactly what was rolled so you can still cheer on your army of
 champions! (except for individual damage dice, but I don't care too much about
 that).
 
+Check out the [[examples.md]] file for what you can expect!
+
 * Run it locally
 Save [[file:roll_dnd_mobs.R]] and open it in your local R session.
 
